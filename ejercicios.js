@@ -89,7 +89,12 @@ function parOImpar(numero) {
  */
 function evaluarNota(nota) {
   // TODO: Implementa la lÃ³gica con if/else
-  return "";
+    if (nota>=60) {
+      return "Aprobado";
+    }
+    else{
+      return "Reprobado";
+    }
 }
 
 /**
