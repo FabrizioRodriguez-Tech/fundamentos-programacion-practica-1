@@ -202,7 +202,7 @@ function numerosPares(n) {
   const pares = [];
 
   for(let i=2;i<=n;i++){
-    if (n%2===0) {
+    if (i%2===0) {
       pares.push(i);
     }
   }
@@ -220,7 +220,13 @@ function numerosPares(n) {
  */
 function sumaArray(numeros) {
   // TODO: Suma todos los elementos del array
-  return 0;
+  let suma = 0;
+
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i]; // sumamos cada elemento
+  }
+
+  return suma;
 }
 
 /**
