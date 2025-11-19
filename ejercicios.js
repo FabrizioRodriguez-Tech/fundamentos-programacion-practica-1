@@ -9,7 +9,7 @@
 /**
  * Ejercicio 1.1: Declarar variables (2 puntos)
  * Crea tres variables con tu informaciÃ³n personal
- * @returns {Object} - Objeto con nombre, edad y carrera
+ * @returns {Object} - Objeto con nombre, edad y 
  */
 function miInformacion() {
   // TODO: Declara las variables nombre, edad y carrera
