@@ -20,5 +20,50 @@ Cada dibujo se creó colocando los números uno por uno dentro de las 900 celdas
 Cuando terminé este proceso, ya tenía 5 matrices originales, cada una representando una imagen diferente.
 
 ---
+2. Creación de las matrices transpuestas
+
+Para obtener la transpuesta de cada imagen, utilicé el método de copiar y pegar especial:
+
+Seleccioné todo el rango de la imagen original (A1:AE30).
+
+Presioné Ctrl+C para copiar.
+
+Fui a una nueva hoja.
+
+Seleccioné la celda A1.
+
+Usé Editar → Pegado especial → Transponer.
+
+Esto generó una matriz de 30×30 donde las filas pasaron a ser columnas y viceversa.
+El formato condicional se mantuvo, por lo que la imagen transpuesta conservó sus colores originales pero con la estructura invertida.
+
+Así obtuve las 5 matrices transpuestas.
+
+---
+
+3. Suma de matrices
+
+Para la suma, creé una hoja nueva y utilicé la fórmula:
+
+=HojaA!A1 + HojaB!A1
+
+
+Luego arrastré hacia abajo y hacia la derecha hasta cubrir el rango A1:AE30.
+
+El resultado fue una imagen mezclada donde cada celda mostraba el valor de la suma de los dos dibujos.
+
+---
+
+4. Resta de matrices
+
+La resta se hizo igual que la suma, pero usando:
+
+=HojaA!A1 - HojaB!A1
+
+
+Luego arrastré para completar toda la matriz.
+Dependiendo de los valores, algunas celdas podían quedar en 0 o en valores pequeños, afectando la intensidad de color en el pixel-art resultante.
+
+
 
 
