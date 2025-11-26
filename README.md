@@ -64,6 +64,34 @@ La resta se hizo igual que la suma, pero usando:
 Luego arrastré para completar toda la matriz.
 Dependiendo de los valores, algunas celdas podían quedar en 0 o en valores pequeños, afectando la intensidad de color en el pixel-art resultante.
 
+---
 
+5. Multiplicación escalar
+
+Para multiplicar una matriz por un escalar, escribí el número escalar en una celda (por ejemplo F1) y luego utilicé esta fórmula:
+
+=HojaA!A1 * $F$1
+
+
+Después rellené toda la matriz arrastrando hacia abajo y a la derecha.
+Esto hizo que la imagen original se “intensificara” o cambiara según el valor del escalar.
+
+---
+
+6. Composición de matrices
+
+La composición se elaboró colocando la imagen B "encima" de la imagen A, de manera que:
+
+Si B tenía un número → ese número aparecía en la imagen final.
+
+Si la celda de B estaba vacía → se mostraba el valor de A.
+
+Esto funcionó como una superposición similar a una capa transparente.
+La fórmula utilizada fue:
+
+=IF(HojaB!A1="", HojaA!A1, HojaB!A1)
+
+
+Después arrastré la fórmula hasta completar todo el rango A1:AE30.
 
 
