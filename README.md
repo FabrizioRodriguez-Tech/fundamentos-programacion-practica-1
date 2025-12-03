@@ -1,103 +1,415 @@
-# Práctica de Fundamentos de Programación
-## Desarrollo de Software y Negocios Digitales
+# Fundamentos de Álgebra - U3.T1 Matrices
+**Fecha:** 11 de noviembre de 2025  
+**Profesor:** Jorge J. Pedrozo Romero  
+**Alumno:** Alexander Fabrizio Rodríguez Pérez  
+**Carrera:** TSU en Desarrollo de Software y Negocios Digitales  
 
- ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
+## Objetivo de la Documentación
+El propósito de esta documentación es registrar las soluciones y el proceso de los ejercicios de la sección "Ejercicios para obtener asistencia" del tema **Matrices**, utilizando formato Markdown.  
+El objetivo es reforzar la comprensión del manejo de matrices y sus operaciones básicas, así como practicar la documentación técnica y la organización de información en un repositorio.
 
-¡Bienvenido a la práctica de programación! En este repositorio aprenderás a programar en JavaScript mientras aplicas conceptos de álgebra.
+## Ejercicios Realizados
 
-## Objetivos
+### Ejercicio 1: Clasificar matrices
 
-- Aprender a usar Git y GitHub
-- Dominar los fundamentos de JavaScript
-- Prepararte para programar operaciones matriciales
-- Desarrollar habilidades de resolución de problemas
+**Enunciado del problema:**  
+Identifica el tipo de cada matriz.
 
-## Requisitos previos
+$$ A =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1 \\
+\end{pmatrix}
+$$
 
-- Tener una cuenta en [GitHub](https://github.com)
-- Instalar [Node.js](https://nodejs.org) (versión 14 o superior)
-- Instalar [Git](https://git-scm.com)
-- Un editor de código como [VS Code](https://code.visualstudio.com)
+$$
+B =
+\begin{pmatrix}
+3 & 0 & 0 \\
+0 & -2 & 0 \\
+0 & 0 & 5 \\
+\end{pmatrix}
+$$
 
-## ¿Cómo empezar?
+$$
+C =
+\begin{pmatrix}
+2 & 1 & 4 \\
+1 & 3 & 5 \\
+4 & 5 & 6 \\
+\end{pmatrix}
+$$
 
-### Paso 1: Fork del repositorio
-1. Haz clic en el botón **Fork** en la esquina superior derecha
-2. Esto creará una copia del repositorio en tu cuenta
+$$
+D =
+\begin{pmatrix}
+1 & 2 & 3 \\
+0 & 4 & 5 \\
+0 & 0 & 6
+\end{pmatrix}
+$$
 
-### Paso 2: Clonar tu fork
-```bash
-git clone https://github.com/TU-USUARIO/fundamentos-programacion.git
-cd fundamentos-programacion
-```
+**Solución o respuesta:**
+Matriz A: Cuadrada, diagonal e identidad.
+Matriz B: Cuadrada y diagonal.
+Matriz C: Cuadrada y simétrica (C = Cᵗ).
+Matriz D: Cuadrada y triangular superior.
 
-### Paso 3: Instalar dependencias
-```bash
-npm install
-```
+**Procedimiento:**
+Verificar la dimensión de cada matriz (todas son cuadradas).
 
-### Paso 4: Completar los ejercicios
-Abre el archivo `ejercicios.js` y completa cada función siguiendo las instrucciones.
+Analizar los elementos fuera de la diagonal para determinar si son ceros.
 
-### Paso 5: Probar tu código localmente
-```bash
-npm test
-```
+Comparar C con su transpuesta para confirmar si es simétrica.
 
-### Paso 6: Subir tus cambios
-```bash
-git add ejercicios.js
-git commit -m "Ejercicio #XX completado"
-git push origin main
-```
+Comprobar que en D los elementos bajo la diagonal son ceros.
 
-### Paso 7: Ver tu calificación
-- Ve a la pestaña **Actions** en tu repositorio de GitHub
-- Verás el resultado de los tests automáticos
-- ¡Tu calificación aparecerá allí­!
+Determinar que A es identidad, ya que la diagonal son unos y el resto ceros.
 
-## Estructura del repositorio
+**Resultado final:**
+Matriz	Tipo de matriz
+A	Cuadrada, diagonal, identidad
+B	Cuadrada, diagonal
+C	Cuadrada, simétrica
+D	Cuadrada, triangular superior
 
-```
-fundamentos-programacion/
-├── .github/
-│   └── workflows/
-│       └── test.yml           # Configuración de GitHub Actions
-├── ejercicios.js              # Aquí­ escribirás tu código
-├── ejercicios.test.js         # Tests (NO modificar)
-├── package.json               # Configuración del proyecto
-└── README.md                  # Este archivo
-```
+### Ejercicio 2: Operaciones básicas con matrices
 
-## Reglas importantes
+**Enunciado del problema:**  
+Dadas las matrices A y B, calcula:  
+a) A + B  
+b) 2A - B  
+c) A × B  
+d) B × A  
+e) Aᵗ  
 
-1. **SOLO** debes modificar el archivo `ejercicios.js`
-2. **NO** modifiques los archivos de test
-3. **NO** modifiques la configuración de GitHub Actions
-4. Todos los ejercicios deben pasar los tests para obtener la máxima calificación
+$$
+A =
+\begin{pmatrix}
+2 & -1 \\
+3 & 4
+\end{pmatrix}
+$$
 
-## Consejos
+$$
+B =
+\begin{pmatrix}
+5 & 2 \\
+-1 & 3
+\end{pmatrix}
+$$
 
-- Lee cuidadamente las instrucciones de cada ejercicio
-- Prueba tu código localmente antes de hacer push
-- Si un test falla, lee el mensaje de error - te dice qué está mal
-- Puedes hacer múltiples commits, no hay penalización
-- Busca ayuda en la documentación de [JavaScript MDN](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
-## Sistema de calificación
+**a) A + B**
 
-- Cada ejercicio vale puntos especí­ficos
-- La calificación final es automática
-- Aparecerá en los resultados de GitHub Actions
-- Badge de estado: ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
+$$
+A =
+\begin{pmatrix}
+(2+5) & (-1+2) \\
+(3-1) & (4+3)
+\end{pmatrix}
+$$
 
-## Próximos pasos
+Resultado:
 
-Una vez domines estos fundamentos, trabajaremos en:
-- Operaciones con matrices
-- Calculadora matricial
-- Aplicaciones prácticas (editores de imágenes, encriptación)
+$$
+A =
+\begin{pmatrix}
+7 & 1 \\
+2 & 7
+\end{pmatrix}
+$$       
+
+**b) 2A - B**
+
+$$
+2A =
+\begin{pmatrix}
+4 & -2 \\
+6 & 8
+\end{pmatrix}
+$$
+
+$$
+2A - B =
+\begin{pmatrix}
+(4-5) & (-2-2) \\
+(6-(-1)) & (8-3)
+\end{pmatrix}
+$$
+
+**Resultado:**
+
+$$
+\begin{pmatrix}
+-1 & -4 \\
+7 & 5
+\end{pmatrix}
+$$
 
 ---
 
-**¡Éxito en tu práctica!**
+**c) A × B**
+
+$$
+A \times B =
+\begin{pmatrix}
+(2 \times 5) + (-1 \times -1) & (2 \times 2) + (-1 \times 3) \\
+(3 \times 5) + (4 \times -1) & (3 \times 2) + (4 \times 3)
+\end{pmatrix}
+$$
+
+**Resultado:**
+
+$$
+\begin{pmatrix}
+11 & 1 \\
+11 & 18
+\end{pmatrix}
+$$
+
+---
+
+**d) B × A**
+
+$$
+B \times A =
+\begin{pmatrix}
+(5 \times 2) + (2 \times 3) & (5 \times -1) + (2 \times 4) \\
+(-1 \times 2) + (3 \times 3) & (-1 \times -1) + (3 \times 4)
+\end{pmatrix}
+$$
+
+**Resultado:**
+
+$$
+\begin{pmatrix}
+16 & 3 \\
+7 & 13
+\end{pmatrix}
+$$
+
+---
+
+**e) Aᵗ (transpuesta de A)**
+
+$$
+A^T =
+\begin{pmatrix}
+2 & 3 \\
+-1 & 4
+\end{pmatrix}
+$$
+
+---
+
+**Resultado final:**
+
+$$
+A + B =
+\begin{pmatrix}
+7 & 1 \\
+2 & 7
+\end{pmatrix}
+$$
+
+$$
+2A - B =
+\begin{pmatrix}
+-1 & -4 \\
+7 & 5
+\end{pmatrix}
+$$
+
+$$
+A \times B =
+\begin{pmatrix}
+11 & 1 \\
+11 & 18
+\end{pmatrix}
+$$
+
+$$
+B \times A =
+\begin{pmatrix}
+16 & 3 \\
+7 & 13
+\end{pmatrix}
+$$
+
+$$
+A^T =
+\begin{pmatrix}
+2 & 3 \\
+-1 & 4
+\end{pmatrix}
+$$
+
+
+
+### Ejercicio 3: Verificación de la propiedad asociativa
+
+**Enunciado del problema:**  
+Dadas las matrices A, B y C, verifica que (AB)C = A(BC).
+
+$$
+A =
+\begin{pmatrix}
+1 & 2 \\
+3 & 4
+\end{pmatrix}
+$$
+
+$$
+B =
+\begin{pmatrix}
+2 & 0 \\
+1 & 3
+\end{pmatrix}
+$$
+
+$$
+C =
+\begin{pmatrix}
+1 & 1 \\
+0 & 2
+\end{pmatrix}
+$$
+
+**Paso 1: Calcular $AB$**
+
+$$
+AB = \begin{pmatrix}
+2 & -1 \\
+3 & 4
+\end{pmatrix} \begin{pmatrix}
+5 & 2 \\
+-1 & 3
+\end{pmatrix} = 
+\begin{pmatrix}
+(2 \times 5) + (-1 \times -1) & (2 \times 2) + (-1 \times 3) \\
+(3 \times 5) + (4 \times -1) & (3 \times 2) + (4 \times 3)
+\end{pmatrix}
+$$
+
+$$
+AB = \begin{pmatrix}
+10 + 1 & 4 - 3 \\
+15 - 4 & 6 + 12
+\end{pmatrix} = 
+\begin{pmatrix}
+11 & 1 \\
+11 & 18
+\end{pmatrix}
+$$
+
+**Paso 2: Calcular $(AB)C$**
+
+$$
+(AB)C = \begin{pmatrix}
+11 & 1 \\
+11 & 18
+\end{pmatrix} \begin{pmatrix}
+1 & 1 \\
+0 & 2
+\end{pmatrix} = 
+\begin{pmatrix}
+(11 \times 1) + (1 \times 0) & (11 \times 1) + (1 \times 2) \\
+(11 \times 1) + (18 \times 0) & (11 \times 1) + (18 \times 2)
+\end{pmatrix}
+$$
+
+$$
+(AB)C = \begin{pmatrix}
+11 + 0 & 11 + 2 \\
+11 + 0 & 11 + 36
+\end{pmatrix} = 
+\begin{pmatrix}
+11 & 13 \\
+11 & 47
+\end{pmatrix}
+$$
+
+**Paso 3: Calcular $BC$**
+
+$$
+BC = \begin{pmatrix}
+5 & 2 \\
+-1 & 3
+\end{pmatrix} \begin{pmatrix}
+1 & 1 \\
+0 & 2
+\end{pmatrix} = 
+\begin{pmatrix}
+(5 \times 1) + (2 \times 0) & (5 \times 1) + (2 \times 2) \\
+(-1 \times 1) + (3 \times 0) & (-1 \times 1) + (3 \times 2)
+\end{pmatrix}
+$$
+
+$$
+BC = \begin{pmatrix}
+5 + 0 & 5 + 4 \\
+-1 + 0 & -1 + 6
+\end{pmatrix} = 
+\begin{pmatrix}
+5 & 9 \\
+-1 & 5
+\end{pmatrix}
+$$
+
+**Paso 4: Calcular $A(BC)$**
+
+$$
+A(BC) = \begin{pmatrix}
+2 & -1 \\
+3 & 4
+\end{pmatrix} \begin{pmatrix}
+5 & 9 \\
+-1 & 5
+\end{pmatrix} = 
+\begin{pmatrix}
+(2 \times 5) + (-1 \times -1) & (2 \times 9) + (-1 \times 5) \\
+(3 \times 5) + (4 \times -1) & (3 \times 9) + (4 \times 5)
+\end{pmatrix}
+$$
+
+$$
+A(BC) = \begin{pmatrix}
+10 + 1 & 18 - 5 \\
+15 - 4 & 27 + 20
+\end{pmatrix} = 
+\begin{pmatrix}
+11 & 13 \\
+11 & 47
+\end{pmatrix}
+$$
+
+**Conclusión:**
+
+$$
+(AB)C = \begin{pmatrix}
+11 & 13 \\
+11 & 47
+\end{pmatrix} = A(BC)
+$$
+
+**Conclusión:**
+
+$$
+(A \times B) \times C = A \times (B \times C)
+$$
+
+Por lo tanto, se cumple la **propiedad asociativa** de la multiplicación de matrices.
+
+
+## Conclusión general
+Los tres ejercicios permitieron aplicar los conceptos fundamentales de las matrices:
+
+Clasificación de tipos de matrices (identidad, diagonal, simétrica, triangular).
+
+Operaciones básicas: suma, resta, multiplicación escalar, multiplicación de matrices y transpuesta.
+
+Verificación de propiedades algebraicas, como la asociatividad.
+
+El desarrollo de estos ejercicios permitió reforzar la comprensión del álgebra matricial
+y la práctica de documentación técnica en formato Markdown.
