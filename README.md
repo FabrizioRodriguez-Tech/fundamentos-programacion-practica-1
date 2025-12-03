@@ -1,11 +1,11 @@
 # Tecnológico de Software
 ## Materia: Fundamentos de álgebra
-## Alumno: Cristopher Maximiliano Euan Pool
-## Actividad \4 - Matrices doc
+## Alumno: Alexander Fabrizio Rodriguez Pérez
+## Actividad \22 - Matrices doc
 
 ---
 
-# 🟦 Ejercicio 1
+#  Ejercicio 1
 
 ## Sistema
 
