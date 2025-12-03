@@ -1,103 +1,250 @@
-# Práctica de Fundamentos de Programación
-## Desarrollo de Software y Negocios Digitales
-
- ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
-
-¡Bienvenido a la práctica de programación! En este repositorio aprenderás a programar en JavaScript mientras aplicas conceptos de álgebra.
-
-## Objetivos
-
-- Aprender a usar Git y GitHub
-- Dominar los fundamentos de JavaScript
-- Prepararte para programar operaciones matriciales
-- Desarrollar habilidades de resolución de problemas
-
-## Requisitos previos
-
-- Tener una cuenta en [GitHub](https://github.com)
-- Instalar [Node.js](https://nodejs.org) (versión 14 o superior)
-- Instalar [Git](https://git-scm.com)
-- Un editor de código como [VS Code](https://code.visualstudio.com)
-
-## ¿Cómo empezar?
-
-### Paso 1: Fork del repositorio
-1. Haz clic en el botón **Fork** en la esquina superior derecha
-2. Esto creará una copia del repositorio en tu cuenta
-
-### Paso 2: Clonar tu fork
-```bash
-git clone https://github.com/TU-USUARIO/fundamentos-programacion.git
-cd fundamentos-programacion
-```
-
-### Paso 3: Instalar dependencias
-```bash
-npm install
-```
-
-### Paso 4: Completar los ejercicios
-Abre el archivo `ejercicios.js` y completa cada función siguiendo las instrucciones.
-
-### Paso 5: Probar tu código localmente
-```bash
-npm test
-```
-
-### Paso 6: Subir tus cambios
-```bash
-git add ejercicios.js
-git commit -m "Ejercicio #XX completado"
-git push origin main
-```
-
-### Paso 7: Ver tu calificación
-- Ve a la pestaña **Actions** en tu repositorio de GitHub
-- Verás el resultado de los tests automáticos
-- ¡Tu calificación aparecerá allí­!
-
-## Estructura del repositorio
-
-```
-fundamentos-programacion/
-├── .github/
-│   └── workflows/
-│       └── test.yml           # Configuración de GitHub Actions
-├── ejercicios.js              # Aquí­ escribirás tu código
-├── ejercicios.test.js         # Tests (NO modificar)
-├── package.json               # Configuración del proyecto
-└── README.md                  # Este archivo
-```
-
-## Reglas importantes
-
-1. **SOLO** debes modificar el archivo `ejercicios.js`
-2. **NO** modifiques los archivos de test
-3. **NO** modifiques la configuración de GitHub Actions
-4. Todos los ejercicios deben pasar los tests para obtener la máxima calificación
-
-## Consejos
-
-- Lee cuidadamente las instrucciones de cada ejercicio
-- Prueba tu código localmente antes de hacer push
-- Si un test falla, lee el mensaje de error - te dice qué está mal
-- Puedes hacer múltiples commits, no hay penalización
-- Busca ayuda en la documentación de [JavaScript MDN](https://developer.mozilla.org/es/docs/Web/JavaScript)
-
-## Sistema de calificación
-
-- Cada ejercicio vale puntos especí­ficos
-- La calificación final es automática
-- Aparecerá en los resultados de GitHub Actions
-- Badge de estado: ![Tests](https://github.com/JorgeTSW/fundamentos-programacion-practica-1/actions/workflows/test.yml/badge.svg)
-
-## Próximos pasos
-
-Una vez domines estos fundamentos, trabajaremos en:
-- Operaciones con matrices
-- Calculadora matricial
-- Aplicaciones prácticas (editores de imágenes, encriptación)
+# Tecnológico de Software
+## Materia: Fundamentos de álgebra
+## Alumno: Cristopher Maximiliano Euan Pool
+## Actividad \4 - Matrices doc
 
 ---
 
-**¡Éxito en tu práctica!**
+# 🟦 Ejercicio 1
+
+## Sistema
+
+$$
+\begin{cases}
+x + y + z = 6\\
+2x - y + z = 3\\
+x + 2y - z = 2
+\end{cases}
+$$
+
+## Matriz aumentada (Gauss)
+
+$$
+\begin{pmatrix}
+1 & 1 & 1 & 6\\
+2 & -1 & 1 & 3\\
+1 & 2 & -1 & 2
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 1 & 1 & 6\\
+0 & -3 & -1 & -9\\
+0 & 1 & -2 & -4
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 1 & 1 & 6\\
+0 & -3 & -1 & -9\\
+0 & 0 & -7 & -21
+\end{pmatrix}
+$$
+
+## Resultado
+$$
+x=1,\quad y=2,\quad z=3
+$$
+
+---
+
+# 🟩 Gauss–Jordan
+
+$$
+\begin{pmatrix}
+1 & 1 & 1 & 6\\
+0 & -3 & -1 & -9\\
+0 & 0 & -7 & -21
+\end{pmatrix}
+\rightarrow
+\begin{pmatrix}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 3
+\end{pmatrix}
+$$
+
+## Resultado
+
+$$
+x=1,\quad y=2,\quad z=3
+$$
+
+---
+
+# 🟪 Matriz Inversa (AX = B)
+
+### Matrices
+
+$$
+A=
+\begin{pmatrix}
+1 & 1 & 1\\
+2 & -1 & 1\\
+1 & 2 & -1
+\end{pmatrix},
+\qquad
+B=
+\begin{pmatrix}
+6\\3\\2
+\end{pmatrix}
+$$
+
+### Resultado
+$$
+X = A^{-1}B =
+\begin{pmatrix}
+1\\2\\3
+\end{pmatrix}
+$$
+
+---
+
+# 🟫 Cofactores / Adjunta
+
+$$
+\det(A)=7
+$$
+
+$$
+A^{-1} = \frac{1}{7}\,\text{adj}(A)
+$$
+
+### Resultado
+$$
+\begin{pmatrix}
+1\\2\\3
+\end{pmatrix}
+$$
+
+---
+
+# 🟧 Regla de Cramer
+
+$$
+\det(A)=7,\qquad  
+\det(D_x)=7,\qquad  
+\det(D_y)=14,\qquad  
+\det(D_z)=21
+$$
+
+### Resultado
+
+$$
+x=1,\quad y=2,\quad z=3
+$$
+
+---
+
+# 🟦 Ejercicio 2
+
+## a)
+$$
+\begin{cases}
+x+y=3\\
+2x+2y=6
+\end{cases}
+$$
+
+**Conclusión:**  
+Tiene infinitas soluciones.
+
+---
+
+## b)
+$$
+\begin{cases}
+x+y=3\\
+2x+2y=7
+\end{cases}
+$$
+
+**Conclusión:**  
+No tiene solución.
+
+---
+
+## c)
+$$
+\begin{cases}
+x+y=3\\
+x-y=1
+\end{cases}
+$$
+
+**Conclusión:**  
+Solución única:
+
+$$
+(x,y)=(2,1)
+$$
+
+---
+
+# 🟩 Ejercicio 3
+
+## Sistema
+
+$$
+\begin{cases}
+x+y+z+w=10\\
+2x+y-z+w=5\\
+x-y+z-w=1\\
+x+y-z+2w=8
+\end{cases}
+$$
+
+## Matriz reducida (Gauss–Jordan)
+
+$$
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & -\frac{5}{2}\\
+0 & 0 & 1 & 0 & \frac{7}{2}\\
+0 & 0 & 0 & 1 & 5
+\end{pmatrix}
+$$
+
+## Resultado
+
+$$
+x=0,\quad
+y=-\frac{5}{2},\quad
+z=\frac{7}{2},\quad
+w=5
+$$
+
+---
+
+# 🟪 Ejercicio 4
+
+## Sistema
+
+$$
+\begin{cases}
+2P + S + 3U = 100\\
+3P + S + 2U = 120\\
+P + 2S + U = 80
+\end{cases}
+$$
+
+## Matriz reducida
+
+$$
+\begin{pmatrix}
+1 & 0 & 0 & 27.5\\
+0 & 1 & 0 & 22.5\\
+0 & 0 & 1 & 7.5
+\end{pmatrix}
+$$
+
+## Resultado
+
+$$
+P=27.5,\quad
+S=22.5,\quad
+U=7.5
+$$
+
+---
+
+# ✅ Conclusión
+Se documentaron los sistemas y resultados utilizando matrices en formato LaTeX para una presentación clara, ordenada y profesional.
