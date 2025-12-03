@@ -1,13 +1,13 @@
 # Tecnológico de Software
-## Materia: Fundamentos de álgebra
+## Materia: Fundamentos de Álgebra
 ## Alumno: Alexander Fabrizio Rodriguez Pérez
-## Actividad \22 - Matrices doc
+## Actividad 22 - Matrices doc
 
 ---
 
-#  Ejercicio 1
+# Ejercicio 1
 
-## Sistema
+## Sistema de ecuaciones
 
 $$
 \begin{cases}
@@ -17,7 +17,7 @@ x + 2y - z = 2
 \end{cases}
 $$
 
-## Matriz aumentada (Gauss)
+## Matriz aumentada (método de Gauss)
 
 $$
 \begin{pmatrix}
@@ -39,14 +39,14 @@ $$
 \end{pmatrix}
 $$
 
-## Resultado
+## Solución
 $$
 x=1,\quad y=2,\quad z=3
 $$
 
 ---
 
-# 🟩 Gauss–Jordan
+# Gauss–Jordan
 
 $$
 \begin{pmatrix}
@@ -62,7 +62,7 @@ $$
 \end{pmatrix}
 $$
 
-## Resultado
+## Solución
 
 $$
 x=1,\quad y=2,\quad z=3
@@ -70,9 +70,9 @@ $$
 
 ---
 
-# 🟪 Matriz Inversa (AX = B)
+# Matriz Inversa (AX = B)
 
-### Matrices
+### Definición de matrices
 
 $$
 A=
@@ -80,15 +80,14 @@ A=
 1 & 1 & 1\\
 2 & -1 & 1\\
 1 & 2 & -1
-\end{pmatrix},
-\qquad
+\end{pmatrix}, \qquad
 B=
 \begin{pmatrix}
 6\\3\\2
 \end{pmatrix}
 $$
 
-### Resultado
+### Solución
 $$
 X = A^{-1}B =
 \begin{pmatrix}
@@ -98,7 +97,7 @@ $$
 
 ---
 
-# 🟫 Cofactores / Adjunta
+# Método de cofactores y adjunta
 
 $$
 \det(A)=7
@@ -110,6 +109,7 @@ $$
 
 ### Resultado
 $$
+X =
 \begin{pmatrix}
 1\\2\\3
 \end{pmatrix}
@@ -117,24 +117,23 @@ $$
 
 ---
 
-# 🟧 Regla de Cramer
+# Regla de Cramer
 
 $$
-\det(A)=7,\qquad  
-\det(D_x)=7,\qquad  
-\det(D_y)=14,\qquad  
+\det(A)=7,\quad  
+\det(D_x)=7,\quad  
+\det(D_y)=14,\quad  
 \det(D_z)=21
 $$
 
-### Resultado
-
+### Solución
 $$
 x=1,\quad y=2,\quad z=3
 $$
 
 ---
 
-# 🟦 Ejercicio 2
+# Ejercicio 2
 
 ## a)
 $$
@@ -145,7 +144,7 @@ x+y=3\\
 $$
 
 **Conclusión:**  
-Tiene infinitas soluciones.
+El sistema tiene infinitas soluciones.
 
 ---
 
@@ -158,7 +157,7 @@ x+y=3\\
 $$
 
 **Conclusión:**  
-No tiene solución.
+No existe solución para este sistema.
 
 ---
 
@@ -172,14 +171,13 @@ $$
 
 **Conclusión:**  
 Solución única:
-
 $$
 (x,y)=(2,1)
 $$
 
 ---
 
-# 🟩 Ejercicio 3
+# Ejercicio 3
 
 ## Sistema
 
@@ -203,7 +201,7 @@ $$
 \end{pmatrix}
 $$
 
-## Resultado
+## Solución
 
 $$
 x=0,\quad
@@ -214,7 +212,7 @@ $$
 
 ---
 
-# 🟪 Ejercicio 4
+# Ejercicio 4
 
 ## Sistema
 
@@ -236,7 +234,7 @@ $$
 \end{pmatrix}
 $$
 
-## Resultado
+## Solución
 
 $$
 P=27.5,\quad
@@ -246,5 +244,5 @@ $$
 
 ---
 
-# ✅ Conclusión
-Se documentaron los sistemas y resultados utilizando matrices en formato LaTeX para una presentación clara, ordenada y profesional.
+# Conclusión
+Se documentaron los sistemas de ecuaciones y sus soluciones utilizando matrices en LaTeX, logrando una presentación ordenada y clara.
